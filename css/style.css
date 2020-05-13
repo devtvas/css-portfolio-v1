@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://github.com/TarcisioValentim/meuportifolio/blob/master/img/templete1.jpg");
+    background-image: url(../img/templete1.jpg);
     background-size: auto 100vh;
     font-family: Arial;
     height: 100vh;
