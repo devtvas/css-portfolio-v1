@@ -1,0 +1,33 @@
+body {
+    background-image: url("file:///C:/Users/CLIENTE/Desktop/Alura/Aula01/img/templete1.jpg");
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+}
+
+.menu {
+    background-color: rgb(59, 204, 192);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title {
+    text-align: left;
+    color: black;
+}
