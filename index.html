@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tarcisio Valentim</title>
     <link rel="shortcut icon" type="image/x-icon" href="./img/templete1.jpg">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
+
+
+
 <script>
+
     alert('Estamos Em Manutencao!');
+
+    function typeWriter(elemento) {
+        const textoAray = elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+        textoAray.forEach((letra, i) => {
+            setTimeout(() => elemento.innerHTML += letra, 75 * i)
+        });
+
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+    }
 </script>
 
 <body>
     <header>
+
         <nav class="menu">
             <ul>
                 <li><a href="#">Sobre</a></li>
@@ -21,8 +40,29 @@
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-        <h1 class="site-title">Tarcisio Valentim</h1>
-        <h2 class="site-title">jr. frontend Developer</h2>
+
+        <div class="content">
+            <h1>[ Ola, Mundo... </h1>
+            <h2> Sou eu, TARCISIO]</h2>
+            <p>
+                var pessoa = {
+                nome: "Tarcisio",
+                profissao: 'programador',
+                cidade: 'Goiania',
+                uf: 'Go'
+                };
+
+                function novaPessoa(novoObjPessoa) {
+                if (typeof novoObjPessoa == 'object') {
+                pessoa = novoObjPessoa;
+                return true;
+                } else {
+                return false;
+                }
+                }
+            </p>
+        </div>
+
     </header>
 </body>
 
