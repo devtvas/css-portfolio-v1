@@ -45,21 +45,16 @@
             <h1>[ Ola, Mundo... </h1>
             <h2> Sou eu, TARCISIO]</h2>
             <p>
-                var pessoa = {
-                nome: "Tarcisio",
-                profissao: 'programador',
-                cidade: 'Goiania',
-                uf: 'Go'
-                };
-
-                function novaPessoa(novoObjPessoa) {
-                if (typeof novoObjPessoa == 'object') {
-                pessoa = novoObjPessoa;
-                return true;
-                } else {
-                return false;
-                }
-                }
+                const estudantes = [
+                { name: 'Tarcisio', city: 'Goiania' },
+                { name: 'Jemima', city: 'Sta Cruz' },
+                { name: 'Silvia', city: 'Lima' },
+                ];
+                
+                const cidades = estudantes.map(
+                estudantes => estudantes.city
+                );
+                console.log(cidades);
             </p>
         </div>
 
