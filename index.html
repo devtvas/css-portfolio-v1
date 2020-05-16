@@ -12,8 +12,6 @@
 </head>
 
 
-
-
 <script>
 
     alert('Estamos Em Manutencao!');
@@ -28,16 +26,38 @@
         const titulo = document.querySelector('h1');
         typeWriter(titulo);
     }
+
 </script>
 
 <body>
+
     <header>
 
         <nav class="menu">
             <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Portifólio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servicos</a>
+                    <ul>
+                        <li><a href="#">Criacao de Sites</a></li>
+                        <li><a href="#">Arte Visual</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cursos</a>
+                    <ul>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Php</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Html & CSS</a></li>
+                        <li><a href="#">Ux Design</a></li>
+                        <li><a href="#">Metodologias Ageis</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contato</a>
+                    <ul>
+                        <li><a href="#">Meu Linkedin</a></li>
+                        <li><a href="#">whatsApp</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -45,27 +65,38 @@
             <h1>[ Ola, Mundo... </h1>
             <h2> Sou eu, TARCISIO]</h2>
             <p>
-                const estudantes = [
-                { name: 'Tarcisio', city: 'Goiania' },
-                { name: 'Jemima', city: 'Sta Cruz' },
-                { name: 'Silvia', city: 'Lima' },
-                ];
-                
-                const cidades = estudantes.map(
-                estudantes => estudantes.city
-                );
-                console.log(cidades);
+                var pessoa = {
+                nome: "Tarcisio",
+                profissao: 'programador',
+                cidade: 'Goiania',
+                uf: 'Go'
+                };
+
+                function novaPessoa(novoObjPessoa) {
+                if (typeof novoObjPessoa == 'object') {
+                pessoa = novoObjPessoa;
+                return true;
+                } else {
+                return false;
+                }
+                }
             </p>
         </div>
-    <div id="sfcy8am8unzs1ec44um2gj2d3gjb6bgmll9"></div>
+
+        <div id="sfcy8am8unzs1ec44um2gj2d3gjb6bgmll9"></div>
         <script type="text/javascript"
-            src="https://counter2.stat.ovh/private/counter.js?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9&down=async" async></script>
+            src="https://counter2.stat.ovh/private/counter.js?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9&down=async"
+            async></script>
         <br><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas">Meu Portifolio no
-    Linkedin</a><noscript><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas"
-        title="contadores de visitas para blog"><img
-            src="https://counter2.stat.ovh/private/webcontadores.php?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9" border="0"
-                 title="contadores de visitas para blog" alt="contadores de visitas para blog"></a></noscript>
+            Linkedin</a><noscript><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas"
+                title="contadores de visitas para blog"><img
+                    src="https://counter2.stat.ovh/private/webcontadores.php?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9"
+                    border="0" title="contadores de visitas para blog"
+                    alt="contadores de visitas para blog"></a></noscript>
+
     </header>
+
 </body>
+
 
 </html>
