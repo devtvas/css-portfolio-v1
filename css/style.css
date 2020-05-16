@@ -5,28 +5,51 @@ body {
     height: 100vh;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .menu {
-    background-color: rgb(59, 204, 192);
+    width: 100%;
+    height: 50px;
+    background-color: #222;
+    font-family: 'Arial';
 }
 
 .menu ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu li {
     list-style: none;
+    position: relative;
 }
 
-a {
-    color: teal;
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+
+.menu a {
+    padding: 15px;
+    display: block;
     text-decoration: none;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
 }
 
-a:hover {
-    text-decoration: underline;
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
 }
 
+.menu ul li:hover ul {
+    visibility: visible;
+}
+
+.menu a:hover{
+    background-color: #e8168a;
+    color: #fff;
+
+}
 .site-subtitle, .site-title {
     color: #262626;
     text-align: left;
@@ -55,7 +78,7 @@ a:hover {
 }
 
 .content p {
-    margin-top: 15px; 
+    margin-top: 15px;
     margin-right: 10px;
     margin-bottom: 25px;
     margin-left: 35px;
