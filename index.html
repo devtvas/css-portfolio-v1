@@ -2,95 +2,142 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tarcisio Valentim</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./img/templete1.jpg">
+    <meta name="description" content="Sou estudante de Desenvolvimento de Software.">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fc087a7d5.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/templete1.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
-
-<script>
-
-    alert('Seja Bem-Vindo!'+'Estamos Em Construcao!');
-
-    function typeWriter(elemento) {
-        const textoAray = elemento.innerHTML.split('');
-        elemento.innerHTML = '';
-        textoAray.forEach((letra, i) => {
-            setTimeout(() => elemento.innerHTML += letra, 75 * i)
-        });
-
-        const titulo = document.querySelector('h1');
-        typeWriter(titulo);
-    }
-
-</script>
-
 <body>
+    <main>
+        <!-- Header -->
+        <header id="top">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#knowledge">Conhecimento</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1 class="title">[ TARCISIO ]</h1>
+                <h2 class="subtitle">{ Developement student }</h2>
+            </div>
+            <a href="#about" class="arrow-down">
+                <i class="fa fa-angle-double-down icone"></i>
+            </a>
+        </header>
 
-    <header>
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2 class="title">SOBRE MIM</h2>
+                <p>
+                    Ola, me chamo Tarcisio Valentim Araujo da Silva,
+                    moro na capital de Goias, sou tecnico em Telecomunicacoes desde de 2010, e em 2015 apos algumas
+                    pesquisas sobre novas carreiras,
+                    fui apresentado ao mundo da programacao.
+                    Realizei varias metas para ininiar meus estudos, ja em 2018 pela Faculdade Senai - Fatesg, comecei
+                    minha nova tragetoria,
+                    sempre focando no que há de mais atualizado no mercado de trabalho.
+                </p>
 
-        <input type="checkbox" id="bt_menu">
-        <label for="bt_menu">&#9776</label>
+                <p>
+                    Atualmente pela Etelge Empreendiemntos, prestamos servicos e projetos terceirizados para operadora
+                    Claro/Embratel. Mais
+                    detalhes podem ser encontrados no meu <a
+                        href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas" target="_blank"
+                        title="LinkedIn">LinkedIn</a>.
+                </p>
+            </div>
+        </section>
 
-        <nav class="menu">
+        <!-- Knowledge -->
+        <section id="knowledge" class="knowledge">
+            <div class="knowledge-content">
+                <h2 class="title">CONHECIMENTO</h2>
+                <p>Estou sempre em busca de novos conhecimentos e atento ao mercado, incorporando novas
+                    tecnologias e métodos conforme minhas necessidades e dos projetos.</p>
+                <ul class="grid">
 
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Servicos</a>
-                    <ul>
-                        <li><a href="#">Criacao de Sites</a></li>
-                        <li><a href="#">Arte Visual</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Cursos</a>
-                    <ul>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Php</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">Html & CSS</a></li>
-                        <li><a href="#">Ux Design</a></li>
-                        <li><a href="#">Metodologias Ageis</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contato</a>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas">Meu Linkedin</a>
-                        </li>
-                        <li><a href="https://web.whatsapp.com/send?phone=5562997004940" target="_blank">Meu WhatsApp</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+                    <li class="r1">HTML 5</li>
+                    <li class="r1">CSS 3</li>
+                    <li class="r1">JavaScript</li>
+                    <li class="r2">React</li>
+                    <li class="r2">React Native</li>
+                    <li class="r2">TypeScript</li>
 
-        <div class="content">
-            <!--
-            <h1>[ Ola, Mundo... </h1>
-            <h2> Sou eu, TARCISIO]</h2>
-            -->
-            <p>
-                { Seja Bem-Vindo ao meu Site / Portifolio! }
-            </p>
-        </div>
+                    <li class="r1">Java</li>
+                    <li class="r2">Angular</li>
+                    <li class="r2">SpringBoot</li>
 
-        <div id="sfcy8am8unzs1ec44um2gj2d3gjb6bgmll9"></div>
-        <script type="text/javascript"
-            src="https://counter2.stat.ovh/private/counter.js?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9&down=async"
-            async></script>
-        <br><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas"></a><noscript><a href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas"
-                title="contadores de visitas para blog"><img
-                    src="https://counter2.stat.ovh/private/webcontadores.php?c=y8am8unzs1ec44um2gj2d3gjb6bgmll9"
-                    border="0" title="contadores de visitas para blog"
-                    alt="contadores de visitas para blog"></a></noscript>
+                    <li class="r2">PhP</li>
+                    <li class="r2">Laravel</li>
+                    <li class="r2">Composer</li>
+                    <li class="r1">NodeJs</li>
 
-    </header>
-    <a href="https://api.whatsapp.com/send?phone=5562997004940&text=Ola, esse é o meu contato pessoal" target="_blank"><img src="img/w64.png"
-            style="height:80px; position:fixed; bottom: 25px; left: 25px; z-index:100;" data-selector="img"></a>
+                    <li class="r2">Git</li>
+                    <li class="r1">GitHub</li>
+
+                    <li class="r1">Banco de Dados</li>
+                    <li class="r2">PostGres</li>
+                    <li class="r2">MySql</li>
+
+
+                    <li class="r2">Usabilidade</li>
+                    <li class="r2">Experiência do Usuário</li>
+                    <li class="r2">Acessibilidade</li>
+                    <li class="r2">Responsividade</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <h2 class="title">Entre em contato:</h2>
+            <div class="grid icons">
+                <a target="_blank" href="https://github.com/TarcisioValentim">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/tarcisioanalistadesenvolvedorsistemas">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" href="https://twitter.com/tarcisio_valent">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:tarcisio.word@gmail.com">
+                    <i class="fas fa-at"></i>
+                </a>
+            </div>
+        </section>
+        <a href="#top" id="scrollToTop">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </main>
+
+    <!-- rodapé -->
+    <footer>
+        <p>
+            &copy; 2020, Tarcisio Valentim Araujo da Silva. Todos os direitos reservados.
+        </p>
+    </footer>
+    <!-- WhatsApp -->
+    <script src="./js/scripts.js"></script>
+
+    <a href="https://web.whatsapp.com/send?phone=5562997004940" target="_blank"><img src="img/w64.png"
+            style="height:80px; position:fixed; bottom: 20px; left: 20px; z-index:100;" data-selector="img">
+    </a>
 
 </body>
-
 
 </html>
