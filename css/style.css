@@ -1,177 +1,311 @@
-body {
-    background-image: url(../img/templete1.jpg);
-    background-size: auto 100vh;
-    font-family: Arial;
-    height: 100vh;
-}
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menu {
-    width: 100%;
-    height: 50px;
-    background-color: #222;
-    font-family: 'Arial';
+body {
+  background-image: url(../img/img5.2.jpg);
+  background-size: 100vw 100vh;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  font-size: 0.75em;
+}
+
+@media (min-width: 320px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 2em;
+  }
+}
+
+#scrollToTop {
+  padding: 4px 8px;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  display: none;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  font-size: 0.8em;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#scrollToTop:hover,
+#scrollToTop:active {
+  opacity: 0.8;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.menu {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
 }
 
 .menu ul {
-    list-style: none;
-    position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 
-.menu ul li {
-    width: 150px;
-    float: left;
+.menu li,
+.knowledge li {
+  list-style: none;
 }
 
 .menu a {
-    padding: 15px;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    background-color: #222;
-    color: #fff;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: chocolate;
+  transition: color 0.5s;
+  font-size: 0.7em;
 }
 
-.menu ul ul {
-    position: absolute;
-    visibility: hidden;
-}
-
-.menu ul li:hover ul {
-    visibility: visible;
-}
-
+.menu a:active,
 .menu a:hover {
-    background-color: #e8168a;
-    color: #fff;
+  color: aqua;
 }
 
-.menu ul ul li {
-    float: none;
-    border-bottom: solid 1px #ccc;
+header .title,
+header .subtitle {
+  color: whitesmoke;
+  text-align: center;
 }
 
-.menu ul ul li a {
-    background-color: rgb(29, 133, 185);
+header figcaption,
+footer p {
+  color: whitesmoke;
+  text-align: center;
 }
 
-label[for="bt_menu"] {
-    padding: 5px;
-    background-color: #222;
-    color: #fff;
-    font-family: "Arial";
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
+header .subtitle {
+  white-space: nowrap; /* p/ a animação ficar apenas em 1 linha */
+  margin: 0 auto;
+  font-weight: 300;
+  animation: typing 4s steps(25) 1s normal;
+  overflow: hidden;
 }
 
-#bt_menu {
-    display: none;
-}
-
-label[for="bt_menu"] {
-    display: none;
-}
-
-@media(max-width: 800px) {
-    label[for="bt_menu"] {
-        display: block;
-    }
-    #bt_menu:checked~.menu {
-        margin-left: 0;
-    }
-    .menu {
-        margin-top: 5px;
-        margin-left: -100%;
-        transition: all .4s;
-    }
-    .menu ul li {
-        width: 100%;
-        float: none;
-    }
-    .menu ul ul {
-        position: static;
-        overflow: hidden;
-        max-height: 0;
-        transition: all .4s;
-    }
-    .menu ul li:hover ul {
-        height: auto;
-        max-height: 200px;
-    }
-}
-
-.site-subtitle, .site-title {
-    color: #262626;
-    text-align: left;
-}
-
-.site-subtitle {
-    font-style: italic;
-    font-weight: lighter;
-}
-
-.line {
-    height: 1px;
-    width: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.content h1 {
-    margin-top: 50px;
-    text-align: left;
-}
-
-.content h2 {
-    text-align: left;
-    color: #e8168a;
-    font-size: 35px;
-}
-
-.content p {
-    margin-top: 15px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-left: 35px;
-    text-align: center;
-    font-size: 20px;
-    animation: typing 4s steps(40) 1s normal;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.content p:after {
-    content: '|';
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca .7s infinite;
-}
-
-/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
-
-@keyframes pisca {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-/*segunda animacao*/
-
+/* animação do efeito de digitação */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 18em;
-        color: #e8168a;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 18em;
+  }
+}
+
+header .subtitle:after {
+  content: '|';
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+/* animação do cursor piscando */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+header .arrow-down {
+  position: absolute;
+  bottom: 50px;
+  display: block;
+}
+
+header .fa-angle-double-down {
+  color: #21759b;
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation: rollover 1s ease infinite;
+}
+
+@keyframes rollover {
+  to {
+    opacity: 0.1;
+    transform: translateY(20px);
+  }
+}
+
+.about,
+.contact {
+  padding: 4em;
+  height: 100vh;
+}
+
+.skills {
+  padding: 3em;
+  min-height: 100vh;
+  background-color: #6e5494;
+}
+
+.skills .title,
+.contact .title {
+  margin-bottom: 1.5em;
+  color: whitesmoke;
+}
+
+.skills .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 780px) {
+  .skills .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.skills figure {
+  text-align: center;
+}
+
+.img-skills {
+  width: 8em;
+  height: 8em;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.img-skills:hover {
+  transform: scale(1.2) rotate(2deg);
+}
+
+.about {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #00a8a8;
+}
+
+@media (min-width: 768px) {
+  .about-content,
+  .knowledge-content {
+    max-width: 50%;
+  }
+}
+
+.about .title,
+.about p,
+.about a {
+  color: whitesmoke;
+  text-align: right;
+}
+
+.about .title,
+.knowledge .title {
+  color: whitesmoke;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.about p,
+.knowledge p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 1em 0;
+  color: whitesmoke;
+}
+
+.knowledge {
+  display: flex;
+  min-height: 100vh;
+  padding: 4em;
+  align-items: center;
+  background-color: chocolate;
+}
+
+.knowledge li {
+  float: left;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 4px 16px;
+  margin: 16px 16px 0 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+}
+
+.knowledge .r1 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.knowledge .r2 {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #21759b;
+}
+
+.contact .title,
+.contact .icons {
+  text-align: center;
+}
+
+@media (max-width: 414px) {
+  .contact .grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1em;
+  }
+}
+
+.contact a {
+  color: whitesmoke;
+  font-size: 4em;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.contact a:active,
+.contact a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  height: 40px;
+  margin-top: -40px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.6em;
 }
