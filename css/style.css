@@ -1,3 +1,470 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/img5.2.jpg);
+  background-size: 100vw 100vh;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  font-size: 0.75em;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .title, header .subtitle {
+  color: whitesmoke;
+  text-align: center;
+}
+
+header figcaption, footer p {
+  color: whitesmoke;
+  text-align: center;
+}
+
+header .subtitle {
+  white-space: nowrap;
+  /* p/ a animação ficar apenas em 1 linha */
+  margin: 0 auto;
+  font-weight: 300;
+  animation: typing 4s steps(25) 1s normal;
+  overflow: hidden;
+}
+
+header .subtitle:after {
+  content: '|';
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+/*setar em about .arrow */
+
+header .arrow-down {
+  position: absolute;
+  bottom: 50px;
+  display: block;
+}
+
+header .fa-angle-double-down {
+  color: #21759b;
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation: rollover 1s ease infinite;
+}
+
+#scrollToTop {
+  padding: 4px 8px;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  display: none;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  font-size: 0.8em;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#scrollToTop:hover, #scrollToTop:active {
+  opacity: 0.8;
+}
+
+nav.menu {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li, .knowledge li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: chocolate;
+  transition: color 0.5s;
+  font-size: 0.7em;
+}
+
+.menu a:active, .menu a:hover {
+  color: aqua;
+}
+
+.skills {
+  padding: 3em;
+  min-height: 100vh;
+  background-color: #6e5494;
+}
+
+.skills .title, .contact .title {
+  margin-bottom: 1.5em;
+  color: whitesmoke;
+}
+
+.skills .grid {
+  display: grid;
+  gap: 2em;
+}
+
+.skills figure {
+  text-align: center;
+}
+
+.img-skills {
+  width: 8em;
+  height: 8em;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.img-skills:hover {
+  transform: scale(1.2) rotate(2deg);
+}
+/*--------------------------
+     sessao about
+----------------------------*/
+.about {
+  display: flex;
+  align-items: center;
+  background-color: #00a8a8;
+  justify-content: flex-end;
+}
+
+.about .title, .about p, .about a {
+  color: whitesmoke;
+  text-align: right;
+}
+
+.about .title, .knowledge .title {
+  color: whitesmoke;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.about p, .knowledge p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 1em 0;
+  color: whitesmoke;
+}
+/*setar em knowledge .arrow */
+
+.about .arrow-down {
+  position: absolute;
+  bottom: -750px;
+  display: block;
+}
+
+.about .fa-angle-double-down {
+  color: #21759b;
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation: rollover 1s ease infinite;
+}
+
+.about, .contact {
+  padding: 4em;
+  height: 100vh;
+}
+
+/*--------------------------
+     sessao knowledge
+----------------------------*/
+
+.knowledge {
+  display: flex;
+  min-height: 100vh;
+  padding: 4em;
+  align-items: center;
+  background-color: chocolate;
+}
+
+.knowledge li {
+  float: left;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 4px 16px;
+  margin: 16px 16px 0 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+}
+
+.knowledge .r1 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.knowledge .r2 {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/*setar em contact .arrow */
+
+.knowledge .arrow-down {
+  position: absolute;
+  bottom: -1450px;
+  display: block;
+}
+
+.knowledge .fa-angle-double-down {
+  color: #21759b;
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation: rollover 1s ease infinite;
+}
+
+/*--------------------------
+     sessao portifolio
+----------------------------*/
+
+.portif {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 4em;
+  align-items: center;
+  background-color: rgb(44, 22, 6);
+  justify-content: space-around;
+  cursor: zoom-in;
+}
+
+.portif .card {
+  position: relative;
+  display: flex;
+  width: 310px;
+  height: 260px;
+}
+
+.portif .card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s;
+}
+
+.portif .card .face.face1 {
+  background: rgb(240, 41, 41);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+/*Ajuste da imagem*/
+
+.portif .card .face.face1 img {
+  max-width: 100px;
+  margin: 110px 0 0;
+}
+
+/*Ajuste tag H3, nome da imagem*/
+
+.portif .card .face.face1 h3 {
+  display: inline-block;
+  margin: 10px 0 0;
+  color: #333;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.portif .card:hover .face.face1 {
+  transform: translateY(-100%) rotateX(90deg);
+  background: #ff0057;
+}
+
+.portif .card .face.face2 {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform-origin: top;
+  transform: translateY(50%) rotateX(50deg);
+}
+
+.portif .card .face.face2 a {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 10px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
+.portif .card:hover .face.face2 {
+  transform: translateY(0) rotateX(0);
+}
+
+/*--------------------------
+     sessao contatos
+----------------------------*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #21759b;
+}
+
+.contact .title, .contact .icons {
+  text-align: center;
+}
+
+.contact a {
+  color: whitesmoke;
+  font-size: 4em;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.contact a:active, .contact a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  height: 40px;
+  margin-top: -40px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.6em;
+}
+
+/*--------------------------
+     Ajuste de @Medias
+----------------------------*/
+
+@media (min-width: 320px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+/*Renderizacao do container*/
+
+/*
+@media (min-width: 320px) {
+  .container .card.img{
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .card {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container .card{
+    font-size: 1em;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+*/
+
+@media (max-width: 768px) {
+  .portif .card {
+    max-width: 300px;
+  }
+  .portif .card.img {
+    position: relative;
+  }
+}
+
+@media (max-width: 992px) {
+  .portif {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portif .card {
+    max-width: 300px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18em;
+  }
+}
+
+@media (min-width: 780px) {
+  .skills .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-content, .knowledge-content, .portif-content {
+    max-width: 50%;
+  }
+}
+
+/* animação do cursor piscando */
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* animação do efeito de digitação */
+
+@keyframes rollover {
+  to {
+    opacity: 0.1;
+    transform: translateY(20px);
+  }
+}
+=======
 
 * {
   margin: 0;
@@ -309,3 +776,4 @@ footer p {
   text-align: center;
   font-size: 0.6em;
 }
+>>>>>>> 68fc6158df9e8c2722ef132417a5fccf4c4baeae
